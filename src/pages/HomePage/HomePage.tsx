@@ -5,14 +5,17 @@ import Catalogue from '../../components/Catalogue/Catalogue';
 import Slider from '../../components/Slider/Slider';
 import Recommended from '../../components/Recommended/Recommended';
 
+
 export const HomePage: FC = () => {
     return (
         <>
+
         <Header loggedIn={true} />
         <Categories />
         <Slider />
         <Catalogue />
         <Recommended />
+
         </>
     )
 }
