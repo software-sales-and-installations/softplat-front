@@ -5,8 +5,6 @@ import classNames from 'classnames';
 import { useAppDispatch } from '../../services/redux/store';
 import { popupState } from '../../UI/Popup/PopupSlice';
 
-
-
 const PersonalTitles: React.FC = () => {
   const location = useLocation();
   const dispatch = useAppDispatch();
@@ -15,17 +13,43 @@ const PersonalTitles: React.FC = () => {
       <nav className={styles.personalTitles}>
         <Link
           to="purchases"
-          className={classNames(styles.personalTitles__titles, location.pathname==='/personal/purchases' ? styles.personalTitles__titles_active : '')}
+          className={classNames(
+            styles.personalTitles__titles,
+            location.pathname === '/personal/purchases'
+              ? styles.personalTitles__titles_active
+              : '',
+          )}
         >
           Мои покупки
         </Link>
-        <Link to="favorites" className={classNames(styles.personalTitles__titles, location.pathname==='/personal/favorites' ? styles.personalTitles__titles_active : '')}>
+        <Link
+          to="favorites"
+          className={classNames(
+            styles.personalTitles__titles,
+            location.pathname === '/personal/favorites'
+              ? styles.personalTitles__titles_active
+              : '',
+          )}
+        >
           Избранное
         </Link>
-        <Link to="settings" className={classNames(styles.personalTitles__titles, location.pathname==='/personal/settings' ? styles.personalTitles__titles_active : '')}>
+        <Link
+
+          to="settings"
+          className={classNames(
+            styles.personalTitles__titles,
+            location.pathname === '/personal/settings'
+              ? styles.personalTitles__titles_active
+              : '',
+          )}
+        >
           Настройки
         </Link>
-        <button type='button' onClick={()=>dispatch(popupState(true))} className={styles.personalTitles__btn}>
+        <button
+          type="button"
+          onClick={() => dispatch(popupState(true))}
+          className={styles.personalTitles__btn}
+        >
           Выйти из профиля
         </button>
       </nav>
