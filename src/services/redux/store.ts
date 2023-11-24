@@ -1,6 +1,6 @@
-import {reducer as toggleBtnReducer} from '../../UI/ToggleButton/ToggleButtonSlice';
-import {reducer as chooseRoleReducer} from '../../UI/ChooseRole/ChooseRoleSlice';
-import {reducer as popupStateReducer} from '../../UI/Popup/PopupSlice';
+import { reducer as toggleBtnReducer } from '../../UI/ToggleButton/ToggleButtonSlice';
+import { reducer as chooseRoleReducer } from '../../UI/ChooseRole/ChooseRoleSlice';
+import { reducer as popupStateReducer } from '../../UI/Popup/PopupSlice';
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import cardsReducer from './slices/cards/cards'
 import { useDispatch, useSelector } from 'react-redux';
@@ -18,13 +18,12 @@ const reducers = combineReducers({
 });
 
 export const store = configureStore({
-	reducer: reducers,
+  reducer: reducers,
 });
 
 export type RootState = ReturnType<typeof store.getState>;
 
-
-
 export type AppDispatch = typeof store.dispatch;
 export const useAppDispatch: () => AppDispatch = useDispatch;
 export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;
+

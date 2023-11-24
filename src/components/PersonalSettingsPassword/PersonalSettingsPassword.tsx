@@ -1,4 +1,4 @@
-import {FC} from 'react';
+import { FC } from 'react';
 import { Input } from '../../UI/Input/Input';
 import { InputTypes } from '../../UI/Input/InputTypes';
 import {
@@ -6,18 +6,16 @@ import {
   PASSWORD_VALIDATION_CONFIG,
 } from '../../utils/constants';
 import { SubmitHandler, useForm } from 'react-hook-form';
-import styles from './PersonalSettingsPassword.module.scss';
+import styles from './personalSettingsPassword.module.scss';
 import { Button } from '../../UI/Button/Button';
 import { ISettingPassword } from './PersonalSettingsTypes';
 
-
 const PersonalSettingsPassword: FC = () => {
-
   const {
     register,
     handleSubmit,
     watch,
-    formState: { errors,  isValid },
+    formState: { errors, isValid },
   } = useForm<ISettingPassword>({ mode: 'onChange' });
 
   const onSubmit: SubmitHandler<ISettingPassword> = data => {
@@ -78,3 +76,4 @@ const PersonalSettingsPassword: FC = () => {
 };
 
 export default PersonalSettingsPassword;
+

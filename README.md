@@ -1,15 +1,12 @@
 # Frontend
 
-Скачиваем репозиторий командой git clone **ссылка SSH**
-
 Прежде всего установите все зависимости:
 
-    npm i 
+    npm i --force
 
 Для запуска:
 
-    npm run dev 
-    запуск на порту localhost:5173
+    npm run dev // localhost:5173
 
 ### Правила работы с ветками и их названия
 
@@ -27,27 +24,3 @@
 Для сообщений коммитов используем [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/). На данном этапе дополнительный scope можно не указывать, сообщение коммита должно выглядеть следующим образом:
 
     feat: краткое описание выполненной работы
-
-### Команда
-
-Евгений Evgenii959
-Калинин Кирилл KiryhaUdmurt
-Дук Юлия YuliaDuk
-Меначо-Пахес Юлия YuliaMP
-Конаков Илья WhiteWat3r
-Анатолий 
-
-### Стек
-
-- HTML 5
-- SCSS
-- React
-- Redux Toolkit
-- TypeScript
-- Axios
-- Storybook
-- Vite
-
-### Pull Request
-
-После выполнения своей задачи создаем пул реквест в **ВЕТКУ dev**

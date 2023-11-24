@@ -1,44 +1,43 @@
-import styles from './PersonalTitles.module.scss';
+import styles from '../PersonalTitles/PersonalTitles.module.scss';
 import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import classNames from 'classnames';
 import { useAppDispatch } from '../../services/redux/store';
 import { popupState } from '../../UI/Popup/PopupSlice';
 
-const PersonalTitles: React.FC = () => {
+const SellerTitles: React.FC = () => {
   const location = useLocation();
   const dispatch = useAppDispatch();
   return (
     <>
       <nav className={styles.personalTitles}>
         <Link
-          to="purchases"
+          to="products"
           className={classNames(
             styles.personalTitles__titles,
-            location.pathname === '/personal/purchases'
+            location.pathname === '/seller/products'
               ? styles.personalTitles__titles_active
               : '',
           )}
         >
-          Мои покупки
+          Мои товары
         </Link>
         <Link
-          to="favorites"
+          to="analysis"
           className={classNames(
             styles.personalTitles__titles,
-            location.pathname === '/personal/favorites'
+            location.pathname === '/seller/analysis'
               ? styles.personalTitles__titles_active
               : '',
           )}
         >
-          Избранное
+          Аналитика
         </Link>
         <Link
-
           to="settings"
           className={classNames(
             styles.personalTitles__titles,
-            location.pathname === '/personal/settings'
+            location.pathname === '/seller/settings'
               ? styles.personalTitles__titles_active
               : '',
           )}
@@ -57,4 +56,5 @@ const PersonalTitles: React.FC = () => {
   );
 };
 
-export default PersonalTitles;
+export default SellerTitles;
+

@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import styles from './SelectForm.module.scss';
+import styles from './Selectform.module.scss';
 import DropDown from '../../UI/DropDown/DropDown';
 import { SELECT_OPTIONS } from '../../utils/constants';
 
