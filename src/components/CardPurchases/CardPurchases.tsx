@@ -54,3 +54,4 @@ const CardPurchases: React.FC<ProductCardProps> = ({
 };
 
 export default CardPurchases;
+

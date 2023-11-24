@@ -11,8 +11,10 @@ export const Footer: FC = () => {
   return (
     <footer className={style.footer}>
       <div className={style.footer__content}>
-        <Link to='/'>  <img className={style.footer__logo} /></Link>
-      
+        <Link to="/">
+          {' '}
+          <img className={style.footer__logo} />
+        </Link>
 
         <ul className={style.footer__column}>
           {FOOTER_LINKS.slice(0, 4).map(link => (
@@ -33,23 +35,23 @@ export const Footer: FC = () => {
             </li>
           ))}
         </ul>
-          <div className={style.footer__socialBLock}>
-            <p className={style.footer__socialMedia}>Мы в соцсетях:</p>
-            <ul className={style.footer__socialIcons}>
-              <li>
-                <Link to={''}>
-                  <BsTelegram className={style.footer__socialIcon} />
-                </Link>
-              </li>
-              <li>
-                <Link to={''}>
-                  <SlSocialVkontakte className={style.footer__socialIcon} />
-                </Link>
-              </li>
-            </ul>
-          </div>
-    
+        <div className={style.footer__socialBLock}>
+          <p className={style.footer__socialMedia}>Мы в соцсетях:</p>
+          <ul className={style.footer__socialIcons}>
+            <li>
+              <Link to={''}>
+                <BsTelegram className={style.footer__socialIcon} />
+              </Link>
+            </li>
+            <li>
+              <Link to={''}>
+                <SlSocialVkontakte className={style.footer__socialIcon} />
+              </Link>
+            </li>
+          </ul>
+        </div>
       </div>
     </footer>
-  );
+  
+);
 };
