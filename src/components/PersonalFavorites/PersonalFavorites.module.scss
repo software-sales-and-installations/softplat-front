@@ -1,0 +1,26 @@
+@import '../../styles/abstract/constants.scss';
+@import '../../styles/abstract/mixins.scss';
+
+.personalFavorites {
+    margin-top: 65px;
+    margin-left: 100px;
+  &__title {
+    margin: 0;
+    @include font-h2-simibold;
+    text-align: start;
+  }
+
+  &__list {
+    margin-top: 45px;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 320px);
+    justify-content: space-between;
+    gap: 40px;
+    padding: 0;
+  }
+
+  &__item {
+    background-color: $white-standart;
+  }
+}
